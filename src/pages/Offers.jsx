@@ -59,9 +59,7 @@ function Offers() {
   return (
     <div className='category'>
       <header>
-        <p className='pageHeader'>
-          Offers
-        </p>
+        <p className='pageHeader'>Offers</p>
       </header>
 
       {loading ? (
@@ -71,16 +69,17 @@ function Offers() {
           <main>
             <ul className='categoryListings'>
               {listings.map((listing) => (
-                <ListingItem 
-                listing={listing.data}
-                 id={listing.id} 
-                 key={listing.id}   />
+                <ListingItem
+                  listing={listing.data}
+                  id={listing.id}
+                  key={listing.id}
+                />
               ))}
             </ul>
           </main>
         </>
       ) : (
-        <p>There are no current offers.</p>
+        <p>There are no current offers</p>
       )}
     </div>
   )
